@@ -9,15 +9,14 @@
     background: darkgrey;
     margin: 2% 5% 5% 5%;
     padding: 3% 5%;
-    position: absolute;
     top: 0;
-    bottom: 0px; 
+    bottom: 0; 
     right: 0;
     left: 0;
     overflow: auto;
 }
 
-.menu {
+.menu, main {
     margin: 5%;
     padding: 3% 5%;
     background: #dccfcf;
@@ -42,7 +41,7 @@
 }
 
 /* Clear floats after the columns */
-.menu:after {
+.menu:after, main:after {
     content: "";
     display: table;
     clear: both;
@@ -97,4 +96,12 @@
 
 .login-info span {
     margin-left: 10%;
+}
+
+.upper-bar-menu li::after {
+    content: " | ";
+}
+
+.upper-bar-menu li:last-of-type::after {
+    content: "";
 }
