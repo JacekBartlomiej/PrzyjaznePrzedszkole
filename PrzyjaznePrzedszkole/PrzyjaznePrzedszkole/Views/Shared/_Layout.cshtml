@@ -10,22 +10,23 @@
     <meta charset="utf-8" />
     <title>Przyjazne Przedszkole: @ViewBag.Title</title>
     <link href="~/css/styles.css" rel="stylesheet" />
+    
 </head>
 <body>
     <header>
-		<div class="upper-bar">
-        <div class="upper-bar-menu">
-            <ul>
-                <li><a asp-controller="App" asp-action="Index">Home</a></li>
-                <li><a asp-controller="App" asp-action="NoticeBoard">Notice Board</a></li>
-                <li><a asp-controller="App" asp-action="Messages">Messages</a></li>
-                <li><a asp-controller="App" asp-action="Photos">Photos</a></li>
-                <li><a asp-controller="App" asp-action="ForParents">For Parents</a></li>
-            </ul>
+        <div class="upper-bar">
+            <div class="upper-bar-menu">
+                <ul>
+                    <li><a asp-controller="App" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="App" asp-action="NoticeBoard">Notice Board</a></li>
+                    <li><a asp-controller="App" asp-action="Messages">Messages</a></li>
+                    <li><a asp-controller="App" asp-action="Photos">Photos</a></li>
+                    <li><a asp-controller="App" asp-action="ForParents">For Parents</a></li>
+                </ul>
             </div>
-        <div class="login-info">
-            <span>@ViewBag.LoggedIn: Dorota</span>
-            <span><a href="#">@ViewBag.LogOut</a></span>
+            <div class="login-info">
+                <span>@ViewBag.LoggedIn: Dorota</span>
+                <span><a href="#">@ViewBag.LogOut</a></span>
             </div>
         </div>
     </header>
@@ -34,6 +35,8 @@
             @RenderBody()
         </main>
     </section>
-    <footer></footer>  
+    <footer></footer>
+    <script src="~/js/script.js"></script>
 </body>
+
 </html>

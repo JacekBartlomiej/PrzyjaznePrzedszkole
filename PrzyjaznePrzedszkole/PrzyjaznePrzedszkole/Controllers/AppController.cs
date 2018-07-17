@@ -40,5 +40,19 @@ namespace PrzyjaznePrzedszkole.Controllers
             ViewBag.Title = "ForParents";
             return View();
         }
+
+        [HttpGet("add-notice")]
+        public IActionResult AddNotice()
+        {
+            ViewBag.Title = "AddNotice";
+            return View();
+        }
+
+        [HttpGet("notice")]
+        public IActionResult Notice()
+        {
+            ViewBag.Title = "Notice";
+            return View();
+        }
     }
 }

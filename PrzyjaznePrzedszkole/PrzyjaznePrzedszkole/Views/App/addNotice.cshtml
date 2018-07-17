@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h1>Add New Notice</h1>
+    <form id="addNoticeForm">
+        <div><label>Nazwa</label><input type="text" /></div>
+        <div>
+            <label>Typ</label>
+            <select>
+                <option value="jadlospis">Jadłospis</option>
+                <option value="trip">Wycieczka</option>
+                <option value="activity-plan">Plan aktywności</option>
+                <option value="assembly">Zebranie rodziców</option>
+                <option value="others">Inne</option>
+            </select>
+        </div>
+        <div>
+            <label>Odbiorcy</label>
+            <select>
+                <option value="all">Wszyscy</option>
+                <option value="gr1">Grupa 1.</option>
+            </select>
+        </div>
+        <div><label>Treść Ogłoszenia</label><textarea rows="10"></textarea></div>
+        <input type="submit" value="Utwórz" />
+
+    </form>
+    
+}

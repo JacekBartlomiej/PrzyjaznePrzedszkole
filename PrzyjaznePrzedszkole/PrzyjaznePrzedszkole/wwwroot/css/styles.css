@@ -18,7 +18,7 @@
 
 .menu, main {
     margin: 5%;
-    padding: 3% 5%;
+    /*padding: 3% 5%;*/
     background: #dccfcf;
     position: absolute;
     top: 10%;
@@ -27,6 +27,12 @@
     left: 0;
     overflow: auto;
 }
+
+    main > div {
+        display: contents;
+        /*padding: 3% 5%;*/
+
+    }
 
 * {
     box-sizing: border-box;
@@ -105,3 +111,55 @@
 .upper-bar-menu li:last-of-type::after {
     content: "";
 }
+
+input, textarea, label, select {
+    font-size: 100%;
+}
+
+label {
+    display: inline-block;
+    width: 20%;
+    vertical-align:top;
+}
+
+textarea, select, input {
+    display: inline-block;
+    width: 50%;
+}
+
+#addNoticeForm{
+    background-color:cornflowerblue;
+    padding:2%;
+}
+
+    #addNoticeForm div {
+        margin: 1%;
+    }
+
+    #addNoticeForm input[type=submit], button {
+        margin: 2%;
+        background-color: darkseagreen;
+        width: 200px;
+        font-size: 100%;
+    }
+
+    h1{
+        margin: 0px;
+    }
+
+.notice {
+    background: aliceblue;
+    width: 50%;
+    padding: 2%;
+}
+
+    .notice h3, .notice p {
+        display: inline-block;
+        padding: 1%;
+
+    }
+
+    .notice p {
+        float: right;
+    }
+
