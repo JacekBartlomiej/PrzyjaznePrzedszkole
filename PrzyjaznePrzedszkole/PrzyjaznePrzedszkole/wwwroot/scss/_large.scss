@@ -1,0 +1,161 @@
+﻿body {
+    background: $primaryColor;
+    height: 100%;
+    font-size: 24px;
+}
+
+.upper-bar {
+    position: absolute;
+    background: darkgrey;
+    margin: 2% 5% 5% 5%;
+    padding: 3% 5%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.menu, main {
+    margin: 5%;
+    /*padding: 3% 5%;*/
+    background: #dccfcf;
+    position: absolute;
+    top: 10%;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    overflow: auto;
+}
+
+main > div {
+    display: contents;
+    /*padding: 3% 5%;*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.menu-item {
+    float: left;
+    height: 50%;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.menu:after, main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .menu-item {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .menu-item {
+        width: 100%;
+    }
+}
+
+.inner-menu-item {
+    height: 100%;
+    width: 100%;
+    background: blue;
+    display: table;
+}
+
+.inner-menu-item p {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.upper-bar * {
+    display: inline;
+}
+
+.login-info {
+    float: right;
+    width: 40%;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.upper-bar-menu {
+    float: left;
+}
+
+.upper-bar:after {
+    clear: both;
+}
+
+.login-info span {
+    margin-left: 10%;
+}
+
+.upper-bar-menu li::after {
+    content: " | ";
+}
+
+.upper-bar-menu li:last-of-type::after {
+    content: "";
+}
+
+input, textarea, label, select {
+    font-size: 100%;
+}
+
+label {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+textarea, select, input {
+    display: inline-block;
+    width: 50%;
+}
+
+#addNoticeForm {
+    background-color: cornflowerblue;
+    padding: 2%;
+}
+
+#addNoticeForm div {
+    margin: 1%;
+}
+
+#addNoticeForm input[type=submit], button {
+    margin: 2%;
+    background-color: darkseagreen;
+    width: 200px;
+    font-size: 100%;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.notice {
+    background: aliceblue;
+    width: 50%;
+    padding: 2%;
+}
+
+.notice h3, .notice p {
+    display: inline-block;
+    padding: 1%;
+}
+
+.notice p {
+    float: right;
+}

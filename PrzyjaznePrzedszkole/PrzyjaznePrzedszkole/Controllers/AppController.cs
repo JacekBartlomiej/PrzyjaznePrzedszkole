@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PrzyjaznePrzedszkole.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,12 @@ namespace PrzyjaznePrzedszkole.Controllers
         public IActionResult AddNotice()
         {
             ViewBag.Title = "AddNotice";
+            return View();
+        }
+
+        [HttpPost("add-notice")]
+        public IActionResult AddNotice(NoticeViewModel model)
+        {
             return View();
         }
 

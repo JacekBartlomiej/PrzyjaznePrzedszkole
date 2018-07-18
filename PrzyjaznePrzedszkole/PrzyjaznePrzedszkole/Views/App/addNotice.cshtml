@@ -3,11 +3,11 @@
 *@
 @{
     <h1>Add New Notice</h1>
-    <form id="addNoticeForm">
-        <div><label>Nazwa</label><input type="text" /></div>
+    <form id="addNoticeForm" method="post">
+        <div><label>Nazwa</label><input type="text" name="name" /></div>
         <div>
             <label>Typ</label>
-            <select>
+            <select name="type">
                 <option value="jadlospis">Jadłospis</option>
                 <option value="trip">Wycieczka</option>
                 <option value="activity-plan">Plan aktywności</option>
@@ -17,12 +17,12 @@
         </div>
         <div>
             <label>Odbiorcy</label>
-            <select>
+            <select name="audience">
                 <option value="all">Wszyscy</option>
                 <option value="gr1">Grupa 1.</option>
             </select>
         </div>
-        <div><label>Treść Ogłoszenia</label><textarea rows="10"></textarea></div>
+        <div><label>Treść Ogłoszenia</label><textarea rows="10" name="message"></textarea></div>
         <input type="submit" value="Utwórz" />
 
     </form>
