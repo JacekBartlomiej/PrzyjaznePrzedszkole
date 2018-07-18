@@ -1,0 +1,40 @@
+﻿
+main {
+    .menu-item {
+        width: 50%;
+    }
+}
+
+
+
+/* ---------------------------HEADER---------------------------- */
+
+
+.upper-bar {
+    margin: 2% 5% 5% 5%;
+
+    .login-info {
+        float: right;
+        width: 40%;
+    }
+
+    nav {
+        float: left;
+        width: 50%;
+        font-size: 1.4rem;
+
+        li {
+            width: auto;
+            padding: 0% 1%;
+        }
+    }
+
+    :after {
+        clear: both;
+    }
+}
+
+
+.menu-item {
+    width: 50%;
+}

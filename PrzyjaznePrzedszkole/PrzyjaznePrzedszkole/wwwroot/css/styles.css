@@ -1,165 +1,243 @@
-﻿body {
-    background: beige;
-    height: 100%;
-    font-size: 24px;
-}
+﻿/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
-.upper-bar {
-    position: absolute;
-    background: darkgrey;
-    margin: 2% 5% 5% 5%;
-    padding: 3% 5%;
-    top: 0;
-    bottom: 0; 
-    right: 0;
-    left: 0;
-    overflow: auto;
-}
+body {
+  line-height: 1; }
 
-.menu, main {
-    margin: 5%;
-    /*padding: 3% 5%;*/
-    background: #dccfcf;
-    position: absolute;
-    top: 10%;
-    bottom: 0px;
-    right: 0;
-    left: 0;
-    overflow: auto;
-}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
-    main > div {
-        display: contents;
-        /*padding: 3% 5%;*/
+nav ul {
+  list-style: none; }
 
-    }
+blockquote, q {
+  quotes: none; }
 
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* ---------------------------BODY---------------------------- */
 * {
-    box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* Create four equal columns that floats next to each other */
-.menu-item {
-    float: left;
-    height: 50%;
-    width: 50%;
-    padding: 10px;
-}
+button, #addNoticeForm input[type=submit], body, a {
+  color: black; }
 
-/* Clear floats after the columns */
-.menu:after, main:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+button, #addNoticeForm input[type=submit] {
+  margin: 2%;
+  background-color: darkseagreen;
+  width: 200px;
+  font-size: 100%; }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-    .menu-item {
-        width: 50%;
-    }
-}
+label, textarea, select, input {
+  font-size: 100%; }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .menu-item {
-        width: 100%;
-    }
-}
+body {
+  background: beige;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem; }
 
-.inner-menu-item {
-    height: 100%;
+/* ---------------------------HEADER---------------------------- */
+.upper-bar {
+  position: absolute;
+  background: darkgrey;
+  padding: 3% 5%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto; }
+  .upper-bar * {
+    display: inline; }
+  .upper-bar .login-info {
     width: 100%;
-    background: blue;
-    display: table;
-}
-
-.inner-menu-item p{
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-
-}
-
-.upper-bar * {
-    display: inline;
-}
-
-.login-info {
-    float: right;
-    width: 40%;
     text-align: right;
     margin-right: 5%;
-}
+    margin-bottom: 1%; }
+    .upper-bar .login-info span {
+      margin-left: 10%; }
+  .upper-bar nav {
+    font-weight: 700;
+    width: 100%;
+    font-size: 1rem; }
+    .upper-bar nav li {
+      float: left;
+      width: 20%;
+      border-right: 1px solid rgba(0, 0, 0, 0.3); }
+      .upper-bar nav li a {
+        display: block;
+        text-align: center; }
+      .upper-bar nav li:last-of-type {
+        border-right: none; }
+  .upper-bar :after {
+    clear: both; }
 
-.upper-bar-menu {
-    float: left;
-}
+/* ---------------------------MAIN---------------------------- */
+h1 {
+  margin: 0px;
+  font-size: 2.4rem; }
 
-.upper-bar:after {
-    clear: both;
-}
-
-.login-info span {
-    margin-left: 10%;
-}
-
-.upper-bar-menu li::after {
-    content: " | ";
-}
-
-.upper-bar-menu li:last-of-type::after {
-    content: "";
-}
-
-input, textarea, label, select {
-    font-size: 100%;
-}
+main {
+  margin: 5%;
+  background: #dccfcf;
+  position: absolute;
+  top: 10%;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  overflow: auto; }
+  main > div {
+    display: contents; }
 
 label {
-    display: inline-block;
-    width: 20%;
-    vertical-align:top;
-}
+  display: inline-block;
+  width: 20%;
+  vertical-align: top; }
 
 textarea, select, input {
-    display: inline-block;
-    width: 50%;
-}
+  display: inline-block;
+  width: 50%; }
 
-#addNoticeForm{
-    background-color:cornflowerblue;
-    padding:2%;
-}
-
-    #addNoticeForm div {
-        margin: 1%;
-    }
-
-    #addNoticeForm input[type=submit], button {
-        margin: 2%;
-        background-color: darkseagreen;
-        width: 200px;
-        font-size: 100%;
-    }
-
-    h1{
-        margin: 0px;
-    }
+/* ---------------------------NOTICE BOARD---------------------------- */
+#addNoticeForm {
+  background-color: darkseagreen;
+  padding: 2%; }
+  #addNoticeForm div {
+    margin: 1%; }
 
 .notice {
-    background: aliceblue;
-    width: 50%;
-    padding: 2%;
-}
+  background: aliceblue;
+  width: 50%;
+  padding: 2%; }
+  .notice h3, .notice p {
+    display: inline-block;
+    padding: 1%; }
+  .notice p {
+    float: right; }
 
-    .notice h3, .notice p {
-        display: inline-block;
-        padding: 1%;
+/* ---------------------------HOME---------------------------- */
+/* Create four equal columns that floats next to each other */
+main .menu-item {
+  float: left;
+  height: 50%;
+  width: 100%;
+  padding: 10px; }
+  main .menu-item .inner-menu-item {
+    height: 100%;
+    width: 100%;
+    background: darkseagreen;
+    display: table; }
+    main .menu-item .inner-menu-item p {
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell; }
 
-    }
+main :after {
+  content: "";
+  display: table;
+  clear: both; }
 
-    .notice p {
-        float: right;
-    }
+@media only screen and (min-width: 560px) {
+  main .menu-item {
+    width: 50%; } }
+
+@media only screen and (min-width: 1140px) {
+  main .menu-item {
+    width: 50%; }
+  /* ---------------------------HEADER---------------------------- */
+  .upper-bar {
+    margin: 2% 5% 5% 5%; }
+    .upper-bar .login-info {
+      float: right;
+      width: 40%; }
+    .upper-bar nav {
+      float: left;
+      width: 50%;
+      font-size: 1.4rem; }
+      .upper-bar nav li {
+        float: left;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+        width: auto;
+        padding: 0% 1%; }
+        .upper-bar nav li a {
+          display: block;
+          text-align: center; }
+        .upper-bar nav li:last-of-type {
+          border-right: none; }
+    .upper-bar :after {
+      clear: both; }
+  .menu-item {
+    width: 50%; } }
 
