@@ -96,8 +96,8 @@ button, #addNoticeForm input[type=submit], body, a {
 button, #addNoticeForm input[type=submit] {
   margin: 2%;
   background-color: darkseagreen;
-  width: 200px;
-  font-size: 100%; }
+  width: auto;
+  font-size: 80%; }
 
 label, textarea, select, input {
   font-size: 100%; }
@@ -107,7 +107,7 @@ body {
   height: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1.4rem; }
+  /*font-size: 1.4rem;*/ }
 
 /* ---------------------------HEADER---------------------------- */
 .upper-bar {
@@ -195,7 +195,7 @@ label {
 
 textarea, select, input {
   display: inline-block;
-  width: 50%; }
+  width: 100%; }
 
 /* ---------------------------NOTICE BOARD---------------------------- */
 #addNoticeForm {
@@ -237,6 +237,9 @@ main :after {
   clear: both; }
 
 @media only screen and (min-width: 560px) {
+  button, #addNoticeForm input[type=submit] {
+    width: 200px;
+    font-size: 100%; }
   /* ---------------------------HEADER---------------------------- */
   .upper-bar {
     position: static; }
@@ -264,7 +267,9 @@ main :after {
       height: 50%; }
   /* ---------------------------MAIN---------------------------- */
   main {
-    top: 5%; } }
+    top: 5%; }
+  textarea, select, input {
+    width: 50%; } }
 
 @media only screen and (min-width: 1140px) {
   main .menu-item {
@@ -278,7 +283,7 @@ main :after {
     .upper-bar nav {
       float: left;
       width: 50%;
-      font-size: 1.4rem; }
+      /*font-size: 1.4rem;*/ }
       .upper-bar nav li {
         width: auto;
         padding: 0% 1%; }
