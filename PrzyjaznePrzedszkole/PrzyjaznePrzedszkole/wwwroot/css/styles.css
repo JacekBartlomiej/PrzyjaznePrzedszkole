@@ -113,13 +113,20 @@ body {
 .upper-bar {
   /*position: absolute;*/
   background: darkgrey;
-  padding: 3% 5%;
+  padding: 1% 5%;
   top: 0;
   /*bottom: 0;*/
   right: 0;
   left: 0;
   overflow: auto;
   font-size: 1rem; }
+  .upper-bar .logo {
+    font-weight: bold;
+    line-height: 1.4rem; }
+    .upper-bar .logo :first-child {
+      font-size: 2.4rem; }
+    .upper-bar .logo :nth-child(2) {
+      font-size: 1.4rem; }
   .upper-bar * {
     /*display: inline;*/ }
   .upper-bar .login-info {
@@ -128,14 +135,17 @@ body {
     text-align: right;
     margin-right: 5%;
     /*margin-bottom: 2%;*/
-    float: right; }
+    float: right;
+    position: relative;
+    top: 0px; }
     .upper-bar .login-info span {
       margin-left: 10%; }
   .upper-bar nav {
     font-weight: 700;
     /*width: 100%;*/
     /*font-size: 1rem;*/
-    width: 100%; }
+    width: 100%;
+    margin-top: 1%; }
     .upper-bar nav .icon {
       /*display: block;*/
       float: left; }
@@ -257,7 +267,7 @@ main :after {
           width: auto; }
           .upper-bar nav ul li a {
             padding: 0.3rem 0;
-            margin: 0 0.3rem; }
+            margin: 0 0.6rem 0 0; }
       .upper-bar nav.responsive ul {
         display: block; }
   main {
@@ -279,14 +289,14 @@ main :after {
     margin: 2% 5% 5% 5%; }
     .upper-bar .login-info {
       float: right;
-      width: 40%; }
+      width: 40%;
+      top: -30px; }
     .upper-bar nav {
       float: left;
       width: 50%;
       /*font-size: 1.4rem;*/ }
       .upper-bar nav li {
-        width: auto;
-        padding: 0% 1%; }
+        width: auto; }
     .upper-bar :after {
       clear: both; }
   .menu-item {
