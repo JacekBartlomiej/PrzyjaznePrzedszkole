@@ -28,6 +28,13 @@ namespace PrzyjaznePrzedszkole.Controllers
             return View();
         }
 
+        [HttpGet("add-message")]
+        public IActionResult AddMessage()
+        {
+            ViewBag.Title = "AddMessage";
+            return View();
+        }
+
         [HttpGet("photos")]
         public IActionResult Photos()
         {

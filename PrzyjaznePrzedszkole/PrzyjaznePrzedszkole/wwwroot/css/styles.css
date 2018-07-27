@@ -246,6 +246,22 @@ main :after {
   display: table;
   clear: both; }
 
+/* ---------------------------MESSAGES---------------------------- */
+.messages-list {
+  display: block;
+  width: 100%;
+  padding: 1% 0; }
+  .messages-list table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%; }
+  .messages-list td, .messages-list th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px; }
+  .messages-list tr:nth-child(even) {
+    background-color: #dddddd; }
+
 @media only screen and (min-width: 560px) {
   button, #addNoticeForm input[type=submit] {
     width: 200px;
@@ -303,5 +319,10 @@ main :after {
     width: 50%; }
   /* ---------------------------MAIN---------------------------- */
   main {
-    top: 10%; } }
+    top: 10%; }
+  /* ---------------------------MESSAGES---------------------------- */
+  .messages-list {
+    display: block;
+    width: 100%;
+    padding: 1% 0; } }
 
