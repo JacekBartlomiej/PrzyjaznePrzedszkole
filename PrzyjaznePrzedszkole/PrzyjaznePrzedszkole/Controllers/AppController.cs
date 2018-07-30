@@ -42,6 +42,12 @@ namespace PrzyjaznePrzedszkole.Controllers
             return View();
         }
 
+        [HttpPost("add-message")]
+        public IActionResult AddMessage(NoticeViewModel model)
+        {
+            return View();
+        }
+
         [HttpGet("photos")]
         public IActionResult Photos()
         {
