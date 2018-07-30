@@ -99,7 +99,7 @@ button, #addNoticeForm input[type=submit] {
   width: auto;
   font-size: 80%; }
 
-label, textarea, select, input {
+label, textarea, select, input, .message button {
   font-size: 100%; }
 
 body {
@@ -108,6 +108,11 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   /*font-size: 1.4rem;*/ }
+
+main :after, .message :after {
+  content: "";
+  display: table;
+  clear: both; }
 
 /* ---------------------------HEADER---------------------------- */
 .upper-bar {
@@ -241,11 +246,6 @@ main .menu-item {
       vertical-align: middle;
       display: table-cell; }
 
-main :after {
-  content: "";
-  display: table;
-  clear: both; }
-
 /* ---------------------------MESSAGES---------------------------- */
 .messages-list {
   display: block;
@@ -261,6 +261,22 @@ main :after {
     padding: 8px; }
   .messages-list tr:nth-child(even) {
     background-color: #dddddd; }
+
+/* ---------------------------MESSAGE---------------------------- */
+.message label {
+  padding: 0.5rem;
+  font-weight: bold; }
+  .message label + div {
+    padding: 0.5rem;
+    width: 100%; }
+  .message label + textarea {
+    width: 80%;
+    margin: 0.5rem;
+    height: 10rem;
+    display: block; }
+
+.message button {
+  float: right; }
 
 @media only screen and (min-width: 560px) {
   button, #addNoticeForm input[type=submit] {
@@ -295,7 +311,21 @@ main :after {
   main {
     top: 5%; }
   textarea, select, input {
-    width: 50%; } }
+    width: 50%; }
+  /* ---------------------------MESSAGE---------------------------- */
+  .message {
+    padding: 1rem;
+    display: block; }
+    .message label {
+      padding: 1rem 1rem 1rem 3rem; }
+      .message label + div {
+        display: inline-block;
+        width: 80%;
+        padding: 1rem; }
+      .message label + textarea {
+        width: 70%;
+        margin: 1rem;
+        display: inline-block; } }
 
 @media only screen and (min-width: 1140px) {
   main .menu-item {
@@ -319,10 +349,5 @@ main :after {
     width: 50%; }
   /* ---------------------------MAIN---------------------------- */
   main {
-    top: 10%; }
-  /* ---------------------------MESSAGES---------------------------- */
-  .messages-list {
-    display: block;
-    width: 100%;
-    padding: 1% 0; } }
+    top: 10%; } }
 
