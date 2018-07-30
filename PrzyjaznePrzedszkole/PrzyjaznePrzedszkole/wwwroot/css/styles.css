@@ -90,17 +90,22 @@ input, select {
 * {
   box-sizing: border-box; }
 
-button, #addNoticeForm input[type=submit], body, a {
+#addNoticeForm input[type=submit], #addMessageForm input[type=submit], button, body, a {
   color: black; }
 
-button, #addNoticeForm input[type=submit] {
+#addNoticeForm input[type=submit], #addMessageForm input[type=submit], button {
   margin: 2%;
   background-color: darkseagreen;
   width: auto;
   font-size: 80%; }
 
-label, textarea, select, input, .message button {
+label, textarea, select, input, .messages-list button, .message button {
   font-size: 100%; }
+
+#addNoticeForm, #addMessageForm {
+  padding: 2%; }
+  #addNoticeForm div, #addMessageForm div {
+    margin: 1%; }
 
 body {
   background: beige;
@@ -109,7 +114,7 @@ body {
   font-weight: 300;
   /*font-size: 1.4rem;*/ }
 
-main :after, .message :after {
+main :after, .messages-list :after, .message :after {
   content: "";
   display: table;
   clear: both; }
@@ -213,12 +218,6 @@ textarea, select, input {
   width: 100%; }
 
 /* ---------------------------NOTICE BOARD---------------------------- */
-#addNoticeForm {
-  background-color: darkseagreen;
-  padding: 2%; }
-  #addNoticeForm div {
-    margin: 1%; }
-
 .notice {
   background: aliceblue;
   width: 50%;
@@ -255,12 +254,18 @@ main .menu-item {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%; }
-  .messages-list td, .messages-list th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px; }
-  .messages-list tr:nth-child(even) {
-    background-color: #dddddd; }
+  .messages-list tr {
+    border: 3px solid #dddddd; }
+    .messages-list tr:nth-child(even) {
+      background-color: #dddddd; }
+    .messages-list tr td, .messages-list tr th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px; }
+    .messages-list tr td {
+      background-color: darkseagreen; }
+  .messages-list button {
+    float: right; }
 
 /* ---------------------------MESSAGE---------------------------- */
 .message label {
@@ -279,7 +284,7 @@ main .menu-item {
   float: right; }
 
 @media only screen and (min-width: 560px) {
-  button, #addNoticeForm input[type=submit] {
+  #addNoticeForm input[type=submit], #addMessageForm input[type=submit], button {
     width: 200px;
     font-size: 100%; }
   /* ---------------------------HEADER---------------------------- */
