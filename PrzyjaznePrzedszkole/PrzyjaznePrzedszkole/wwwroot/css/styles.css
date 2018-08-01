@@ -93,6 +93,29 @@ input, select {
 #addNoticeForm input[type=submit], #addMessageForm input[type=submit], button, body, a {
   color: black; }
 
+#addNoticeForm input[type=submit], #addMessageForm input[type=submit], button, main .menu-item .inner-menu-item, .messages-list tr:not(:first-child) {
+  background-color: darkseagreen;
+  transition-property: background-color;
+  transition-duration: 0.5s; }
+  #addNoticeForm input[type=submit]:hover, #addMessageForm input[type=submit]:hover, button:hover, main .menu-item .inner-menu-item:hover, .messages-list tr:hover:not(:first-child) {
+    background-color: darkolivegreen; }
+
+/*%textHover {
+    transition-property: font-size;
+    transition-duration: 0.5s;
+
+    &:hover {
+        font-size: 1.1em;
+    }
+}*/
+.upper-bar nav .icon, .upper-bar nav ul a, .upper-bar nav.responsive ul li a {
+  color: aliceblue;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.5s; }
+  .upper-bar nav .icon:hover, .upper-bar nav ul a:hover, .upper-bar nav.responsive ul li a:hover {
+    color: darkgreen; }
+
 #addNoticeForm input[type=submit], #addMessageForm input[type=submit], button {
   margin: 2%;
   background-color: darkseagreen;
@@ -118,6 +141,10 @@ main :after, .messages-list :after, .message :after {
   content: "";
   display: table;
   clear: both; }
+
+a {
+  font-weight: bold;
+  text-decoration: none; }
 
 /* ---------------------------HEADER---------------------------- */
 .upper-bar {
@@ -184,7 +211,6 @@ main :after, .messages-list :after, .message :after {
         .upper-bar nav.responsive ul li a {
           padding: 0.7rem 0;
           display: block;
-          text-decoration: none;
           border-bottom: solid 1px rgba(0, 0, 0, 0.3); }
   .upper-bar :after {
     clear: both; }
@@ -238,7 +264,6 @@ main .menu-item {
   main .menu-item .inner-menu-item {
     height: 100%;
     width: 100%;
-    background: darkseagreen;
     display: table; }
     main .menu-item .inner-menu-item p {
       text-align: center;
@@ -255,15 +280,14 @@ main .menu-item {
     border-collapse: collapse;
     width: 100%; }
   .messages-list tr {
-    border: 3px solid #dddddd; }
-    .messages-list tr:nth-child(even) {
-      background-color: #dddddd; }
+    border: 3px solid #dddddd;
+    /*td {
+            @extend %clickable;
+        }*/ }
     .messages-list tr td, .messages-list tr th {
       border: 1px solid #dddddd;
       text-align: left;
       padding: 8px; }
-    .messages-list tr td {
-      background-color: darkseagreen; }
   .messages-list button {
     float: right; }
 
