@@ -55,10 +55,10 @@ namespace PrzyjaznePrzedszkole.Controllers
             return View();
         }
 
-        [HttpGet("for-parents")]
-        public IActionResult ForParents()
+        [HttpGet("parents-data")]
+        public IActionResult ParentsData()
         {
-            ViewBag.Title = "ForParents";
+            ViewBag.Title = "ParentsData";
             return View();
         }
 
