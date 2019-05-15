@@ -467,10 +467,10 @@ main .menu-item .inner-menu-item p {
     main .menu-item {
       width: 50%;
       height: 50%;
-      padding: 40px 70px; }
+      padding: 40px; }
   /* ---------------------------MAIN---------------------------- */
   main {
-    top: 5%; } }
+    top: 90px; } }
 
 @media only screen and (min-width: 1140px) {
   main .menu-item {
@@ -495,4 +495,3 @@ main .menu-item .inner-menu-item p {
   /* ---------------------------MAIN---------------------------- */
   main {
     top: 10%; } }
-
