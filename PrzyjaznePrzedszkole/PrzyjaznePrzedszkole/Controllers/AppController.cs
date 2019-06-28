@@ -43,7 +43,7 @@ namespace PrzyjaznePrzedszkole.Controllers
         }
 
         [HttpPost("add-message")]
-        public IActionResult AddMessage(NoticeViewModel model)
+        public IActionResult AddMessage(AnnouncementViewModel model)
         {
             return View();
         }
@@ -70,7 +70,7 @@ namespace PrzyjaznePrzedszkole.Controllers
         }
 
         [HttpPost("add-notice")]
-        public IActionResult AddNotice(NoticeViewModel model)
+        public IActionResult AddNotice(AnnouncementViewModel model)
         {
             return View();
         }

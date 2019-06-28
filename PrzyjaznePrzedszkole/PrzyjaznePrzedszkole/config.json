@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "KDConnectionString":  "server=(localdb)\\KinderGartenDB;Database=KDDb;Integrated Security=true;MultipleActiveResultSets=true;"
+  }
+}
