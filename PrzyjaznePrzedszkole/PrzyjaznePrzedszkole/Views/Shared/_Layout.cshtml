@@ -1,4 +1,5 @@
-﻿@{
+﻿@RenderSection("scripts", required: false)
+@{
     ViewBag.Title = "Home Page";
     ViewBag.Menu = "Menu";
     ViewBag.LoggedIn = "Logged In";
@@ -13,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="~/css/styles.css" rel="stylesheet" />
 
@@ -51,6 +52,11 @@
     </section>
     <footer></footer>
     <script src="~/js/script.js"></script>
+    <script src="~/clientapp/dist/runtime.js"></script>
+    <script src="~/clientapp/dist/polyfills.js"></script>
+    <script src="~/clientapp/dist/styles.js"></script>
+    <script src="~/clientapp/dist/vendor.js"></script>
+    <script src="~/clientapp/dist/main.js"></script>
 </body>
 
 </html>
