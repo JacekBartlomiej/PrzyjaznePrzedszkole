@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using PrzyjaznePrzedszkole.Data;
 
 namespace PrzyjaznePrzedszkole
 {
@@ -14,7 +16,23 @@ namespace PrzyjaznePrzedszkole
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            var host = BuildWebHost(args);
+
+            SeedDb(host);
+            
+            host.Run();
+        }
+
+        private static void SeedDb(IWebHost host)
+        {
+            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
+
+            using(var scope = scopeFactory.CreateScope())
+            {
+                var seeder = scope.ServiceProvider.GetService<KDSeeder>();
+                seeder.Seed();
+            }
+
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

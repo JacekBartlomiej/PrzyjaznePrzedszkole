@@ -1,0 +1,18 @@
+[
+  {
+    "Title": "Trip to Warsaw",
+    "Type": "Trip",
+    "Date": "2016-02-28 14:53:04",
+    "Author": "Patrycja",
+    "Content": "On 13th July we are going on a trip to Warsaw. Please remember to provide your kid with drinks and snacks because the trip will be long",
+    "Audience": "Everybody"
+  },
+  {
+    "Title": "Party",
+    "Type": "Party",
+    "Date": "2016-02-28 14:53:04",
+    "Author": "Ewelina",
+    "Content": "On 8th August we are going on a have a party. Please remember to provide your kid with nice clothes",
+    "Audience": "Everybody"
+  }
+]

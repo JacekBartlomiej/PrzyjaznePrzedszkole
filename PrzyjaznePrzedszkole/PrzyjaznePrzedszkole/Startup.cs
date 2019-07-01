@@ -31,6 +31,8 @@ namespace PrzyjaznePrzedszkole
                 cfg.UseSqlServer(_config.GetConnectionString("KDConnectionString"));
             });
 
+            services.AddTransient<KDSeeder>();
+
             services.AddMvc();
         }
 

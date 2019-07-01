@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PrzyjaznePrzedszkole.Data;
 using PrzyjaznePrzedszkole.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,13 @@ namespace PrzyjaznePrzedszkole.Controllers
 {
     public class AppController: Controller
     {
+        private readonly KDContext _context;
+
+        public AppController(KDContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -18,7 +26,10 @@ namespace PrzyjaznePrzedszkole.Controllers
         public IActionResult NoticeBoard()
         {
             ViewBag.Title = "Notice Board";
-            return View();
+            var results = _context.Announcements
+                .OrderBy(a => a.Date)
+                .ToList();
+            return View(results);
         }
 
         [HttpGet("messages")]

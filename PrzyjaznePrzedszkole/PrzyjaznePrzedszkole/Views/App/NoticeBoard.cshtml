@@ -1,15 +1,19 @@
-﻿@*
+﻿@model IEnumerable<Announcement>
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-    <h1>Notice Board</h1>
-    <div class="notices">
-        <div class="notice">
-            <div><h3>Jadlospis</h3><p>Wszyscy</p></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet....</p>
-            <button id="seeNoticeBtn">See Notice</button>
-        </div>
+<h1>Notice Board</h1>
+<div class="notices">
+    @foreach (var a in Model)
+    {
 
-        <button id="addNoticeBtn">Add a notice</button>
+    <div class="notice">
+        <div><h3>@a.Title</h3><p>@a.Audience</p></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet....</p>
+        <button id="seeNoticeBtn">See Notice</button>
     </div>
-}
+            }
+        
+
+    <button id="addNoticeBtn">Add a notice</button>
+</div>
