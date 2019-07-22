@@ -23,6 +23,10 @@ export class CreateGalleryComponent implements OnInit {
     }
   }
 
+  removeFile(urlToBeRemoved: string): void {
+    this.urls = this.urls.filter(url => url !== urlToBeRemoved);
+  }
+
   constructor() { }
 
   ngOnInit() {

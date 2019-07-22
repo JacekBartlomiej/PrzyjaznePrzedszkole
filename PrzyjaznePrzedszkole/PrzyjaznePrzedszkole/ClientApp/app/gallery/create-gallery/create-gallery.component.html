@@ -1,6 +1,7 @@
-<input type="file" accept="image/*" multiple (change)="detectFiles($event)">
+<input type="file" accept="image/*" multiple (change)="detectFiles($event)" class="input-files">
+<!-- <label for="file">Choose a file</label> -->
 <div class="img-wrap" *ngFor="let url of urls" >
-    <span class="close">&times;</span>
+    <span class="close" (click)="removeFile(url)">&times;</span>
     <img [src]="url" class="rounded mb-3" width="180">
 </div>
 <input type="submit">
