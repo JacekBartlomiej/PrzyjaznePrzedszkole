@@ -445,7 +445,7 @@
     "npm-package-arg": "^6.1.0",
     "npm-packlist": "^1.4.1",
     "npm-pick-manifest": "^2.2.3",
-    "npm-registry-fetch": "^3.9.0",
+    "npm-registry-fetch": "^4.0.5",
     "npm-run-path": "^2.0.2",
     "null-check": "^1.0.0",
     "num2fraction": "^1.2.2",
