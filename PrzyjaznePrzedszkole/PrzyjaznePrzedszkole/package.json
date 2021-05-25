@@ -83,7 +83,7 @@
     "browserify-rsa": "^4.0.1",
     "browserify-sign": "^4.0.4",
     "browserify-zlib": "^0.2.0",
-    "browserslist": "^4.5.5",
+    "browserslist": "^4.16.5",
     "browserstack": "^1.5.2",
     "buffer": "^4.9.1",
     "buffer-alloc": "^1.2.0",
