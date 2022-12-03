@@ -170,7 +170,7 @@
     "debug": "^2.6.9",
     "debuglog": "^1.0.1",
     "decamelize": "^1.2.0",
-    "decode-uri-component": "^0.2.0",
+    "decode-uri-component": "^0.2.1",
     "deep-equal": "^1.0.1",
     "default-gateway": "^4.2.0",
     "default-require-extensions": "^2.0.0",
